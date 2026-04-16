@@ -4,11 +4,11 @@ This project installs a `yt` command that lets you play YouTube audio in the ter
 
 ## Arch/debian Linux only
 
-`script.sh` is designed specifically for Arch Linux and debian linux
+`using_tmux.sh` is designed specifically for Arch Linux and debian linux
 
 ## What the setup script does
 
-Running `script.sh` will:
+Running `using_tmux.sh` will:
 
 - Install required packages with `pacman`: `yt-dlp`, `mpv`, `tmux`, `ffmpeg`, `cava`
 - Enable tmux mouse mode in `~/.tmux.conf`
@@ -19,13 +19,13 @@ Running `script.sh` will:
 1. Make the setup script executable:
 
 ```bash
-chmod +x script.sh
+chmod +x using_tmux.sh
 ```
 
 2. Run the setup:
 
 ```bash
-./script.sh
+./using_tmux.sh
 ```
 
 3. Use the new command:
