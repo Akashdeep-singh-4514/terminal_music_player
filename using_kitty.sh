@@ -37,6 +37,14 @@ if [ -z "$QUERY" ]; then
     exit 1
 fi
 
+# --- KITTY CHECK ---
+# We check TERM_PROGRAM (standard) or TERMINFO (often points to kitty on Arch)
+if [[ "$TERM_PROGRAM" != "kitty" && "$TERMINAL_NAME" != "kitty" && "$TERM" != "xterm-kitty" ]]; then
+    echo "Error: This command can only be run inside the Kitty terminal."
+    exit 1
+fi
+# -------------------
+
 # Check if current terminal is Kitty
 if [ "$TERM" != "xterm-kitty" ]; then
     echo "Warning: This script works best inside Kitty terminal."
